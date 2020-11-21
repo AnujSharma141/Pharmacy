@@ -1,5 +1,5 @@
 import React from 'react'
-import {Bar, HorizontalBar, Line, Pie} from 'react-chartjs-2'
+import  {Line, Pie} from 'react-chartjs-2'
 
 export default function Dash() {
     const pie = {
