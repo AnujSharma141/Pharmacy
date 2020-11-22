@@ -4,7 +4,7 @@ import Login from './components/login'
 import Tab from './components/tab'
 
 function App() {
-  const [log, setLog] = useState(true)
+  const [log, setLog] = useState(false)
   const logIn = ()=>{
     setLog(true)
   }
