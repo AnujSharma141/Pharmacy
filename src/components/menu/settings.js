@@ -54,7 +54,7 @@ export default function Settings() {
                     <input type="text" className='settings-inp' onChange={changeHandler} placeholder={user.data.phone} name="phone" value={data.phone} id=""/>
                 </span>
                 <span className='settings-span'>
-                    <p className='settings-label'>Employee Call Name</p>
+                    <p className='settings-label'>Employee Address</p>
                     <input type="text" className='settings-inp' onChange={changeHandler} placeholder={user.data.userName} name="userName" value={data.userName} id=""/>
                 </span>
                 <button className='log-button setting-button' type="submit">SAVE</button>

@@ -18,9 +18,7 @@ export default function Login(props) {
                     setLog({err:'Login Success', state:true})
                 }
             }))
-            setTimeout(()=>{
-                if(!log.status)setLog({status: false, err: 'Invalid Login'})
-            },1000)
+            .catch(err =>{ if(log.status !== true)setLog({status: false, err: 'Invalid Login'})})
         }
     }
 

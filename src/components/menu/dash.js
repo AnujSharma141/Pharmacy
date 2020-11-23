@@ -16,12 +16,14 @@ export default function Dash() {
       if(filter.length !== 0){filter.data.map(item=> monTotal = monTotal + parseInt(item.amount))}
 
     }
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      
     const pie = {
-        labels: ['Vicocin', 'Amoxil', 'Delasone'],
+        labels: [months[date.getMonth()-2],months[date.getMonth()-1], months[date.getMonth()]],
         datasets: [
           {
             label: 'Sales',
-            data: [3, 3, 1],
+            data: [0, 0, total],
             backgroundColor: [
               'rgba(182, 219, 175, 0.2)',
               'rgba(116, 171, 106, 0.6)',
@@ -31,14 +33,13 @@ export default function Dash() {
           },
         ],
       }
-      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
       const bar = {
        
         labels: [months[date.getMonth()-4],months[date.getMonth()-3], months[date.getMonth()-2],months[date.getMonth()-1], months[date.getMonth()],],
         datasets: [
           {
             label: 'Sales',
-            data: [0, 0, 0, 0, 575],
+            data: [0, 0, 0, 0, total],
             fill: false,
             backgroundColor: 'rgb(58, 117, 47)',
             borderColor: 'rgba(192, 227, 186, 0.5)',
@@ -89,7 +90,7 @@ export default function Dash() {
     return (
         <div className='dash-main'>
             <div className='dash-graph'><div className='dash-graph-span'><Line width={10} options={options} data={bar} /></div></div>
-            <div className='dash-pie'><h2 className='dash-pie-head'>Top Products</h2><Pie options={{legend:{labels:{fontFamily:'Poppins',}}}} data={pie}/></div>
+            <div className='dash-pie'><h2 className='dash-pie-head'>Top Sales</h2><Pie options={{legend:{labels:{fontFamily:'Poppins',}}}} data={pie}/></div>
             <div className='dash-tab'><p className='dash-tab-p'>Total Sales</p><h1 className='dash-tab-head'>{sales.status?total :null}</h1></div>
             <div className='dash-tab'><p className='dash-tab-p'>Last Month Sales</p><h1 className='dash-tab-head'>{sales.status?monTotal :null}</h1></div>
             <div className='dash-tab'><p className='dash-tab-p'>Last Month Performance</p><h1 className='dash-tab-head'>0%</h1></div>

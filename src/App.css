@@ -429,6 +429,12 @@ flex-direction: column;
 .bill-inp::placeholder{
   font-family: 'Poppins', sans-serif;
 }
+.bill-form{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+}
 .bill-prod{
   display: flex;
   flex-direction: column;
@@ -458,6 +464,21 @@ flex-direction: column;
   width:32%;
   padding: 0vw 3vw;
 }
+.bill-prod-list{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  margin-top: 3.4vw;
+  margin-left: 2vw;
+}.bill-prod-list-item{
+  margin: 0.3vw 0vw;
+  padding: 0vw 1vw;
+  font-size: 0.9vw;
+  cursor: pointer;
+}
+.bill-prod-list-item:hover{
+background: #dbdbdb;}
 .bill-p{
   color: #ffffff;
   font-weight: 700;
@@ -485,6 +506,7 @@ flex-direction: column;
   background: #fff;
   color: #000;
   text-transform: uppercase;
+  margin-bottom: 2vw;
 }.bill-button-main:hover{
   background: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
