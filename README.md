@@ -5,6 +5,9 @@ Pharmacy Dashboard shopping application frontend created with [REACT](https://re
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
+![alt text](https://i.ibb.co/TBLnVCQ/screely-1606477589725.png)
+
+
 ## Development
 
 Run the following commands in terminal to run on your local machine.
