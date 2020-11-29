@@ -1,6 +1,6 @@
 # Pharmacy Dashboard
 
-Pharmacy Dashboard shopping application frontend created with [REACT](https://reactjs.org/).
+Pharmacy Dashboard application frontend created with [REACT](https://reactjs.org/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
