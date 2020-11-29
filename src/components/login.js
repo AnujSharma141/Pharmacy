@@ -3,22 +3,22 @@ import {useState} from 'react'
 import axios from 'axios'
 
 export default function Login(props) {
-    
+
     const [user, setUser] = useState({id:'', pass:''})
-    const [log, setLog] = useState({status:false, err:null })
+    const [log, setLog] = useState({status:false, err:null, load:false})
     
     const validLog = e =>{
         e.preventDefault()
-        if(user.id === '' || user.pass === '') setLog({status: false, err: 'Invalid Login'})
+        if(user.id === '' || user.pass === '') setLog({status: false, err: 'Enter Credentials!', load:false})
         else {
-            
+            setLog({status: false, err: '', load: true})
             axios.post('https://hidden-reaches-87611.herokuapp.com/api/login',{"username":user.id,"password":user.pass})
             .then((res=>{
                 if(res.status === 200){props.sub()
-                    setLog({err:'Login Success', state:true})
+                    setLog({err:'Login Success', state:true, load:false})
                 }
             }))
-            .catch(err =>{ if(log.status !== true)setLog({status: false, err: 'Invalid Login'})})
+            .catch(err =>{ if(log.status !== true)setLog({status: false, err: 'Invalid Login', load:false})})
         }
     }
 
@@ -33,6 +33,7 @@ export default function Login(props) {
     }
 
     return (
+        <>
         <div className='log-tab'>
             <h1 className='log-title'>Log In.</h1>
             <p className='log-sub'>with your employee credentials</p>
@@ -43,5 +44,7 @@ export default function Login(props) {
                 <p className='log-err'>{log.err}</p>
             </form>
         </div>
+        {log.load?<div id="cover-spin" className="log-load"></div>: null }
+        </>
     )
 }

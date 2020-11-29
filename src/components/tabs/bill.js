@@ -38,8 +38,6 @@ export default function Bill() {
 
     const [filter, setFilter] = useState([])
     const [active, setActive] = useState(null)
-
-
     const [list, setList] = useState({data:0,quan:null,price:null})
 
     const filterList = e => {

@@ -54,7 +54,7 @@ export default function Account() {
                     <div className='prod-list-item'><p className='prod-list-no'>{count++}</p ><p className='prod-list-name'>{item.name}</p><p className='prod-list-pr'>{item.price}</p ><p className='prod-list-id'>{item.id}</p><p className='prod-list-ac' onClick={()=>deleteProd(item.id)}>DELETE</p></div>
                     )
                 })
-                :<p>Loading ...</p>}
+                :<div id="cover-spin"></div>}
             </div>
             <div className='prod-form-span'>
                 <form className='prod-form' onSubmit={prodAdd}>

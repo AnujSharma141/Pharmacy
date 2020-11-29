@@ -36,7 +36,7 @@ export default function Sales() {
                 {sales.status?filter.length!==0? filter.map(item=>{return(
                     <div className='sales-chart-item'><p className='sales-chart-count-no'>{count++}</p><p className='sales-chart-item-name'>{item.name}</p><p className='sales-chart-count'>{item.amount}</p><p className='sales-chart-inc'>{item.id}</p></div>
                 )}):<div className='sales-err'>No Data Available</div>
-                :<div className='sales-err'>Loading ...</div>}</div>
+                :<div id="cover-spin"></div>}</div>
             
         </div>
     )
