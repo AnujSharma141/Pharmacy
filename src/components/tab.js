@@ -30,7 +30,7 @@ export default function Tabs(props) {
         return (
         <div className='dash'>
         <div className='dash-menu'>
-            <h1 className='dash-menu-title'>ABC</h1>
+            <h1 className='dash-menu-title'>STORE</h1>
             <p className={active.dash?'dash-menu-item menu-active':'dash-menu-item'} onClick={()=>router('dash')}><img className='menu-icon' src={home} alt=""/>Dashboard</p>
             <p className={active.sales?'dash-menu-item menu-active':'dash-menu-item'} onClick={()=>router('sales')}><img className='menu-icon' src={bar} alt=""/>Sales</p>
             <p className={active.invoice?'dash-menu-item menu-active':'dash-menu-item'} onClick={()=>router('invoice')}><img className='menu-icon' src={file} alt=""/>Invoice</p>

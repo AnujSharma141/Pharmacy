@@ -158,7 +158,7 @@ flex-direction: column;
 .dash-pri{
   width:77vw;
   height:100vw;
-  background: rgb(237, 255, 227);
+  background: rgb(242, 255, 236);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -241,50 +241,82 @@ flex-direction: column;
 }
 .dash-graph{
   width:63%;
-  height: 22vw;
+  height: 24vw;
   background: rgb(255, 255, 255);
-  border-radius: 2.5vw;
+  border-radius: 1.25vw;
   margin: 1vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }.dash-graph-span{
-  width:90%;
-  height: 90%;
+  width:87%;
+  height: 87%;
+  margin-top: 0vw;
 }
 .dash-pie{
   width:30%;
-  height: 22vw;
+  height: 24vw;
   background: rgb(255, 255, 255);
   margin: 1vw;
   display: flex;flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 2.5vw;
+  border-radius: 1.4vw;
 }
 .dash-pie-head{
   margin-top: 0vw;
-  color: #2a532c;
+  margin-bottom: 0vw;
+  width:70%;
+  text-align: center;
+  font-weight: 800;
+  color: #3a3a3a;
+  font-size: 1.85vw;
+}
+.dash-pie-p{
+  margin-top: 0.2vw;
+  margin-bottom: 2vw;
+  margin-left: 0vw;
+  font-size: 0.9vw;
+  font-weight: 800;
+  color: #979797;
 }
 .dash-tab{
   width:30%;
-  height: 12vw;
-  background: #b8e4b3;
+  height: 9.2vw;
+  background: #ffffff;
   margin: 1vw;
-  border-radius: 2.3vw;
+  display: flex;
+  align-items: center;
+  border-radius: 1.3vw;
+}
+.dash-tab-icon-back{
+  width:4.3vw;
+  height: 4.3vw;
+  background: #e9f8e9;
+  margin-left: 1.4vw;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dash-tab-icon{
+  width:2vw;
+  height: 2vw;
+  fill: #aad1aa;
 }
 .dash-tab-p{
-  margin-top: 3vw;
+  margin-top: 2vw;
   margin-bottom: 0vw;
-  margin-left: 2.3vw;
-  font-size: 0.95vw;
-  font-weight: 300;
-  color: #476447;
+  margin-left: 1.5vw;
+  font-size: 0.8vw;
+  font-weight: 600;
+  color: #7e7e7e;
 }.dash-tab-head{
-  margin-top: 0.6vw;
-  font-size: 2.4vw;
-  margin-left: 2.3vw;
-  color: #1f3820;
+  margin-top: 0vw;
+  font-size: 2vw;
+  margin-left: 1.5vw;
+  font-weight: 800;
+  color: #2c2c2c;
 }
 
 
@@ -301,7 +333,7 @@ flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
   padding: 1vw 0vw;
-  border-radius: 3vw;
+  border-radius: 2vw;
 }
 .sales-cal{
   height: 20vw;
@@ -315,7 +347,7 @@ flex-direction: column;
 }
 .sales-chart{
   height: 34vw;
-  border-radius: 3.4vw;
+  border-radius: 2.4vw;
   width:40vw;
   background: rgb(255, 255, 255);
   display: flex;
@@ -365,30 +397,47 @@ flex-direction: column;
   width:10%;
 }
 .sales-tab{
+  width:23vw;
+  height: 11.2vw;
+  background: #ffffff;
+  margin: 1vw;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  border-radius: 1.3vw;
+}
+.sales-tab-icon-back{
+  width:4.9vw;
+  height: 4.9vw;
+  background: #e9f8e9;
+  margin-left: 2.4vw;
+  border-radius: 1vw;
+  display: flex;
   align-items: center;
   justify-content: center;
-  width: 23vw;
-  height: 12vw;
-  background: #bbe0bb;
-  border-radius: 3vw;
 }
-.sales-p{
-  margin-top: 2.5vw;
+.sales-tab-icon{
+  width:2vw;
+  height: 2vw;
+  fill: #aad1aa;
+}
+.sales-tab-p{
+  margin-top: 2vw;
   margin-bottom: 0vw;
-
-  color: #476447;
-}
-.sales-head{
-  margin-top: 0vw;
-  font-size: 4vw;
+  margin-left: 1.8vw;
+  font-size: 1vw;
   font-weight: 600;
-  color: #1f3820;
+  color: #7e7e7e;
+}.sales-tab-head{
+  margin-top: -0.5vw;
+  font-size: 2.8vw;
+  margin-left: 1.8vw;
+  font-weight: 800;
+  color: #2c2c2c;
 }
+
 .sales-top{
   margin-top: 3vw;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
 }
 .sales-err{
@@ -404,7 +453,7 @@ flex-direction: column;
   width:72%;
   height:30vw;
   margin-top: 1vw;
-  border-radius: 3vw;
+  border-radius: 2vw;
   padding: 2vw 3vw;
   align-items: center;
   background: #fff;
@@ -465,8 +514,8 @@ flex-direction: column;
 }
 .bill-total{
   background: #6d9b6d;
-  border-radius: 3vw;
-  height: 86%;
+  border-radius: 2vw;
+  height: 90%;
   width:32%;
   padding: 0vw 3vw;
 }
@@ -528,11 +577,11 @@ background: #dbdbdb;}
 }
 .prod-list{
   width: 90%;
-  height: 79%;
+  height: 82%;
   display: flex;
   flex-direction: column;
   padding:1vw 4vw;
-  border-radius: 3vw;
+  border-radius: 2vw;
   background: rgb(255, 255, 255);
   overflow-y: scroll;
 }
