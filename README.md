@@ -1,6 +1,6 @@
 # Pharmacy Dashboard
 
-Dashboard to manage the workflow of a Pharmacy Store. Manages Sales and Products, Generates Invoices, Analyzes Profit.
+Dashboard to manage the workflow of a Pharmacy Store. Manages Sales and Products, Generates Invoices and Analyzes Profit.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ![alt text](https://i.ibb.co/qWLjGzY/screely-1608494547075.png)
