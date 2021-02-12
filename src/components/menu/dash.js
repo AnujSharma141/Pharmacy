@@ -18,15 +18,19 @@ export default function Dash() {
     }, [])
 
   //data functions
+  const alternative = month =>{
+    return date.getMonth()-month < 0?date.getMonth()-month + 12 : date.getMonth()-month
+  }
     if(sales.status){
       
       filterSales = monthlySales.map(item =>{
       let monthTotal = 0
-      let filter = sales.data.filter(ele => parseInt(ele.date.slice(3,5)) === (date.getMonth()-monthlySales.indexOf(item)+1 ))
+      let filter = sales.data.filter(ele => parseInt(ele.date.slice(3,5)) === (alternative(monthlySales.indexOf(item))+1 ))
       filter.length !== 0?filter.map(data => monthTotal = monthTotal + parseInt(data.amount))
       :monthTotal = 0
       return monthTotal
     })
+    console.log(sales)
     totalSales = filterSales.reduce((a, b) => a + b, 0)
     performance = (filterSales[1]-filterSales[2])*100/filterSales[1]
   }
@@ -50,7 +54,7 @@ export default function Dash() {
 
     //graph chart
       const bar = {
-        labels: [months[date.getMonth()-4],months[date.getMonth()-3], months[date.getMonth()-2],months[date.getMonth()-1], months[date.getMonth()],],
+        labels: [months[alternative(4)],months[alternative(3)], months[alternative(2)],months[alternative(1)], months[date.getMonth()],],
         datasets: [{
             label: 'Sales',
             data: sales.status?[filterSales[4], filterSales[3], filterSales[2], filterSales[1], filterSales[0]]: [0,0,0,0,0],
