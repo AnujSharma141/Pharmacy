@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import util from '../util/main'
 import axios from 'axios'   
-import id from '../api/sales'
 
 export default function Invoice() {
     const [prod, setProd] = useState({status:false,data:null})
