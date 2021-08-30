@@ -1,10 +1,18 @@
-# Pharmacy Dashboard
 
-Dashboard to manage the workflow of a Pharmacy Store. Manages Sales and Products, Generates Invoices and Analyzes Profit.
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![alt text](https://i.ibb.co/qWLjGzY/screely-1608494547075.png)
 
+![alt text](https://i.ibb.co/m4Rw5f2/image.png)
+
+# 
+
+Dashboard to manage the workflow of a Pharmacy Store.
+
+
+## Features 
+
+* Manages products
+* Track sales
+* Generates inovices
 
 ## Development
 
@@ -19,6 +27,4 @@ npm start
 
 ## Server
 
-[Pharmacy Server](https://github.com/AnujSharma141/PharmacyBackend)
-
-Setup the repository and run the server.
+Repository : [Pharmacy Server](https://github.com/AnujSharma141/PharmacyBackend)
