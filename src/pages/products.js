@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
+import trash from '../assets/icons/trash.svg'
 
 export default function Account() {
     const [data, setData] = useState({name:'', price:''})
@@ -15,10 +16,11 @@ export default function Account() {
         const value = e.target.value
         setData({name: data.name, price: data.price, [keyName]: value})
         console.log(data)
+        console.log(prod)
     }
     const prodAdd = e =>{
         e.preventDefault()
-        if(data.name !== '' || data.price !== ''){ 
+        if(data.name !== '' && data.price !== ''){ 
             console.log(data)
             axios.post('https://hidden-reaches-87611.herokuapp.com/api/products',{"name":data.name,"price":data.price})
             .then(res=>{ if(res.status === 200){ alert('Data Added')
@@ -27,7 +29,7 @@ export default function Account() {
             .then(res=>setProd({status:true,data:Object.values(res.data)}))
             setData({name:'', price:''})
         }})
-        }
+        } else alert('please fill required fields!')
     }
 
     const deleteProd = id =>{
@@ -51,12 +53,16 @@ export default function Account() {
                 {prod.status?prod.data.map(item=>{
                  
                     return(
-                    <div className='prod-list-item'><p className='prod-list-no'>{count++}</p ><p className='prod-list-name'>{item.name}</p><p className='prod-list-pr'>{item.price}</p ><p className='prod-list-id'>{item.id}</p><p className='prod-list-ac' onClick={()=>deleteProd(item.id)}>DELETE</p></div>
+                    <div className='prod-list-item'><p className='prod-list-no'>{count++}</p ><p className='prod-list-name'>{item.name}</p><p className='prod-list-pr'>$ {item.price}</p ><p className='prod-list-id'>#{item.id}</p>
+                    <p className='prod-list-ac' onClick={()=>deleteProd(item.id)}>
+                    <img src={trash} class="prod-list-ac-icon" />
+                    </p></div>
                     )
                 })
                 :<div id="cover-spin"></div>}
             </div>
             <div className='prod-form-span'>
+                
                 <form className='prod-form' onSubmit={prodAdd}>
                     <input className='prod-inp' onChange={changeHandler} placeholder='Name' type="text" name="name" id="" value={data.name}/>
                     <input className='prod-inp-pr' onChange={changeHandler} placeholder='Price' type="text" name="price" id="" value={data.price}/>

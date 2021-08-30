@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import './App.css'
-import Login from './components/login'
+import './style/App.css'
+import Login from './pages/login'
 import Tab from './components/tab'
 
 function App() {
