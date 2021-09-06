@@ -14,7 +14,8 @@ export default function Dash() {
   //sales data api 
   useEffect(() => {
         axios.get('https://hidden-reaches-87611.herokuapp.com/api/sales')
-        .then(res=>setSales({status:true,data:Object.values(res.data)}))            
+        .then(res=>setSales({status:true,data:Object.values(res.data)}))   
+        console.log(sales.data)         
     }, [])
 
   //data functions
@@ -54,7 +55,7 @@ export default function Dash() {
         },
       ],
     }
-
+    console.log(filterSales)
     //graph chart
       const bar = {
         labels: [util.months[util.alternative(4)],util.months[util.alternative(3)], util.months[util.alternative(2)],util.months[util.alternative(1)], util.months[date.getMonth()],],

@@ -29,6 +29,7 @@ const alternative = month =>{
 
 let month = date.getMonth()+1
 let day = date.getDate()
+if(day<10)day = '0' + day
 let year = date.getFullYear()
 let shortStartDate = day + "/" + month + "/" + year 
 

@@ -3,6 +3,7 @@ import Calendar from 'react-calendar'
 import '../style/Calendar.css';
 import axios from 'axios'
 import money from '../assets/icons/money.svg'
+import util from '../util/main'
 
 export default function Sales() {
     const [sales, setSales] = useState({status:false,data:null})
@@ -18,13 +19,11 @@ export default function Sales() {
 
     let count = 1
     const [date, setDate] = useState(new Date())
-    let month = date.getMonth()+1
-    let day = date.getDate()
-    let year = date.getFullYear()
-    let shortStartDate = day + "/" + month + "/" + year;
+
+
     let filter =[]
     if(sales.status){
-        filter = sales.data.filter(item => item.date === shortStartDate)
+        filter = sales.data.filter(item => item.date === util.date)
     console.log(filter)}
     let total = 0
     filter.map(item=>{
