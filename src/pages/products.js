@@ -7,7 +7,7 @@ export default function Account() {
     const [prod, setProd] = useState({status:false,data:null})
 
     useEffect(() => {       
-        axios.get('https://hidden-reaches-87611.herokuapp.com/api/products')
+        axios.get('https://evening-castle-65340.herokuapp.com/api/products')
         .then(res=>setProd({status:true,data:Object.values(res.data)}))
         },[])
 
@@ -22,10 +22,10 @@ export default function Account() {
         e.preventDefault()
         if(data.name !== '' && data.price !== ''){ 
             console.log(data)
-            axios.post('https://hidden-reaches-87611.herokuapp.com/api/products',{"name":data.name,"price":data.price})
+            axios.post('https://evening-castle-65340.herokuapp.com/api/products',{"name":data.name,"price":data.price})
             .then(res=>{ if(res.status === 200){ alert('Data Added')
             console.log(res)
-            axios.get('https://hidden-reaches-87611.herokuapp.com/api/products')
+            axios.get('https://evening-castle-65340.herokuapp.com/api/products')
             .then(res=>setProd({status:true,data:Object.values(res.data)}))
             setData({name:'', price:''})
         }})
@@ -35,10 +35,10 @@ export default function Account() {
     const deleteProd = id =>{
         let arr = prod.data
         let filter = arr.filter(item => item.id !== id)
-        axios.put('https://hidden-reaches-87611.herokuapp.com/api/products',filter)
+        axios.put('https://evening-castle-65340.herokuapp.com/api/products',filter)
             .then(res=>{ if(res.status === 200){ alert('Deleted!')
             console.log(res)
-            axios.get('https://hidden-reaches-87611.herokuapp.com/api/products')
+            axios.get('https://evening-castle-65340.herokuapp.com/api/products')
             .then(res=>setProd({status:true,data:Object.values(res.data)}))
     }})
 }

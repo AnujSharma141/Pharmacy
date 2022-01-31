@@ -12,7 +12,7 @@ export default function Login(props) {
         if(user.id === '' || user.pass === '') setLog({status: false, err: 'Enter Credentials!', load:false})
         else {
             setLog({status: false, err: '', load: true})
-            axios.post('https://hidden-reaches-87611.herokuapp.com/api/login',{"username":user.id,"password":user.pass})
+            axios.post('https://evening-castle-65340.herokuapp.com/api/login',{"username":user.id,"password":user.pass})
             .then((res=>{
                 if(res.status === 200){props.sub()
                     setLog({err:'Login Success', state:true, load:false})

@@ -13,7 +13,7 @@ export default function Sales() {
 
 
     useEffect(() => {
-        axios.get('https://hidden-reaches-87611.herokuapp.com/api/sales')
+        axios.get('https://evening-castle-65340.herokuapp.com/api/sales')
         .then(res=>setSales({status:true,data:Object.values(res.data)}))            
     }, [])
 

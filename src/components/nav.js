@@ -6,7 +6,7 @@ export default function Nav(props) {
     
     const [user, setUser] = useState({status:false, name : null})
     useEffect(() => {
-        axios.get('https://hidden-reaches-87611.herokuapp.com/api/user')
+        axios.get('https://evening-castle-65340.herokuapp.com/api/user')
         .then(res=>{
         let stringArray = res.data.name.split(/(\s+)/)
         setUser({status:true,name : stringArray[0]})

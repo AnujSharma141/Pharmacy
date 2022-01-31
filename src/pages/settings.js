@@ -6,7 +6,7 @@ export default function Settings() {
     const [data, setData] = useState({name:'', id:'', password:'', phone:'', userName:'',})
     
     useEffect(() => {
-        axios.get('https://hidden-reaches-87611.herokuapp.com/api/user')
+        axios.get('https://evening-castle-65340.herokuapp.com/api/user')
         .then(res=>{setUser({status:true,data:res.data})
         setData({name:res.data.name, id:res.data.id, password:res.data.password, phone:res.data.phone, userName:res.data.userName,})
         })
@@ -22,10 +22,10 @@ export default function Settings() {
         e.preventDefault()
         if(data.name !== '' || data.price !== ''){ 
             console.log(data)
-            axios.put('https://hidden-reaches-87611.herokuapp.com/api/user',{"name":data.name,"id":data.id,"password":data.password,"phone":data.phone,"userName":data.userName})
+            axios.put('https://evening-castle-65340.herokuapp.com/api/user',{"name":data.name,"id":data.id,"password":data.password,"phone":data.phone,"userName":data.userName})
             .then(res=>{ if(res.status === 200){ alert('Data Saved')
             
-            axios.get('https://hidden-reaches-87611.herokuapp.com/api/user')
+            axios.get('https://evening-castle-65340.herokuapp.com/api/user')
         .then(res=>{setUser({status:true,data:res.data})
         })
             setData({name:'', id:'', password:'', phone:'', userName:'',})

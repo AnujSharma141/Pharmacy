@@ -7,13 +7,13 @@ export default function Invoice() {
     const [id, setId] = useState(null)
     useEffect(() => {       
         
-        axios.get('https://hidden-reaches-87611.herokuapp.com/api/sales')
+        axios.get('https://evening-castle-65340.herokuapp.com/api/sales')
         .then(res =>{
             let arr = Object.values(res.data)
             setId(arr[arr.length-1].id + 1)
         })
 
-        axios.get('https://hidden-reaches-87611.herokuapp.com/api/products')
+        axios.get('https://evening-castle-65340.herokuapp.com/api/products')
         .then(res=>setProd({status:true,data:Object.values(res.data)}))
         },[])
     const[sudo,setSudo] =useState({name:"",age:""}) //clears value
@@ -32,7 +32,7 @@ export default function Invoice() {
         e.preventDefault()
         if(data.name !== '' && list.total !== 0){ 
             console.log(data)
-            axios.post('https://hidden-reaches-87611.herokuapp.com/api/sales',{"name":data.name,"amount":list.total,"date":data.date,"products":data.products})
+            axios.post('https://evening-castle-65340.herokuapp.com/api/sales',{"name":data.name,"amount":list.total,"date":data.date,"products":data.products})
             .then(res=>{ if(res.status === 200){ alert('Data Added')
             console.log(res)
             setList({...list, data:[], total:0})
