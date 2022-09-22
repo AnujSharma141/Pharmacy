@@ -1,7 +1,7 @@
 body{
   margin: 0;
   display: flex;
-  background: url('../assets/img/login.png') center;
+  background: url('../assets/img/login.jpg') center;
   background-size: cover;
   font-family: 'Poppins', sans-serif;
   justify-content: center;
@@ -11,7 +11,7 @@ body{
 .log-tab{
 width: 18.5vw;
 padding: 4.5vw;
-border-radius:2vw;
+border-radius:1.2vw;
 background: rgb(255, 255, 255);
 display: flex;
 align-items: center;
